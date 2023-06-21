@@ -1,0 +1,46 @@
+<htmL>
+
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+
+<body>
+    <h1 style = "position:relative; left:25px;">Insurance Form 25 OCR</h1>
+
+    <form method="post" enctype="multipart/form-data">
+        <div style = "position:relative; left:25px;">
+            <label for="in_file">Please enter the input PDF file location:
+                <input id="in_file" name="in_file" type="text" placeholder="">
+            </label>
+        </div>
+        <br>
+        <div style = "position:relative; left:25px;">
+            <label for="out_file">Please enter the output files destination:
+                <input id="out_file" type="text" name="out_file" placeholder="">
+            </label>
+        </div>
+        <br>
+        <div style = "position:relative; left:25px;">
+            <input type="submit" value="Submit">
+        </div>
+
+    </form>
+    <br>
+    <div style="position:relative; left:25px;width: 500px;" >
+
+        {% for errors in errors %}
+        <div class="alert alert-danger" role="alert" >
+            {{errors}}
+        </div>
+        {% endfor %}
+    </div>
+    </div>
+
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+</html>
